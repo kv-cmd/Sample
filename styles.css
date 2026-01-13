@@ -44,15 +44,22 @@ body {
     align-items: center;
 }
 
+/* UPDATED LOGO CSS */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
-.dot { color: var(--accent); }
+.logo img {
+    height: 40px; /* Controls the size of your logo */
+    width: auto;
+    transition: opacity 0.3s;
+}
+
+.logo:hover img {
+    opacity: 0.8;
+}
 
 .nav-links {
     list-style: none;
@@ -257,6 +264,6 @@ body {
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .split-layout { flex-direction: column; }
-    .nav-links { display: none; } /* Simplified for MVP */
+    .nav-links { display: none; }
     .signup-form { flex-direction: column; align-items: center; }
 }
